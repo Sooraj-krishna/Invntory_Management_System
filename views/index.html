@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Inventory Items</h1>
+            <button id="addNewItem" class="btn-primary">ADD NEW ITEM</button>
+        </header>
+
+        <main>
+            <div id="inventoryList"></div>
+        </main>
+
+        <!-- Add New Item Modal -->
+        <div id="addItemModal" class="modal">
+            <div class="modal-content">
+                <h2>Add New Item</h2>
+                <form id="addItemForm">
+                    <div class="form-group">
+                        <label for="name">Item Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <select id="category" required></select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="supplier">Supplier:</label>
+                        <select id="supplier" required></select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <select id="location" required></select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" required min="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="unitPrice">Unit Price:</label>
+                        <input type="number" id="unitPrice" required min="0" step="0.01">
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="btn-secondary" onclick="closeModal()">Cancel</button>
+                        <button type="submit" class="btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
